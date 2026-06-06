@@ -1,3 +1,4 @@
+// Array to store all the paper details (Title, Subject, and PDF URL)
 const allPapers = [
     { title: "2014 Dancing Paper", subject: "Dancing", url: "static/2014-dancing.pdf" },
     { title: "2017 Art Paper", subject: "Art", url: "static/2017-art.pdf" },
@@ -5,14 +6,15 @@ const allPapers = [
     { title: "2019 Sinhala Paper", subject: "Sinhala", url: "static/2019-sinhala.pdf" }
 ];
 
-function filterPapers(subject) {
+// Function to render the paper cards inside the HTML container
+function displayPapers(papersArray) {
     const container = document.getElementById('papers-container');
-    container.innerHTML = ""; 
-    const filtered = (subject === 'All') 
-        ? allPapers 
-        : allPapers.filter(p => p.subject === subject);
     
-    filtered.forEach(paper => {
+    // Clear previous content in the container
+    container.innerHTML = ""; 
+    
+    // Loop through the array and generate HTML for each card
+    papersArray.forEach(paper => {
         container.innerHTML += `
             <div class="col-md-4 mb-3">
                 <div class="card shadow-sm border-0">
@@ -28,4 +30,30 @@ function filterPapers(subject) {
     });
 }
 
+// Function to filter papers based on the selected subject button
+function filterPapers(subject) {
+    // If 'All' is selected, show all papers; otherwise, filter by subject
+    const filtered = (subject === 'All') 
+        ? allPapers 
+        : allPapers.filter(p => p.subject === subject);
+        
+    // Call the display function with the filtered results
+    displayPapers(filtered);
+}
+
+// Event listener for the search bar functionality
+document.getElementById('searchBar').addEventListener('input', function(event) {
+    // Convert the typed search text to lowercase for case-insensitive matching
+    const searchText = event.target.value.toLowerCase();
+    
+    // Filter papers where the title or subject includes the typed text
+    const searchedPapers = allPapers.filter(paper => {
+        return paper.title.toLowerCase().includes(searchText) || paper.subject.toLowerCase().includes(searchText);
+    });
+
+    // Call the display function with the searched results
+    displayPapers(searchedPapers);
+});
+
+// Display all papers by default when the page initially loads
 filterPapers('All');
