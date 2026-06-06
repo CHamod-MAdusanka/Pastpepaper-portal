@@ -1,0 +1,45 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+
+.navbar {
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+}
+
+#searchBar {
+    border-radius: 50px;
+    padding: 15px 25px;
+    border: 2px solid #ddd;
+}
+
+#searchBar:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+}
+
+.btn-outline-primary {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+
+.card-title {
+    font-size: 1.2rem;
+    color: #222;
+}
