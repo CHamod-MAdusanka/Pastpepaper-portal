@@ -45,3 +45,8 @@ To keep the portal updated, follow these two simple steps:
     url: "static/2020-science.pdf" 
 }
 Built with ❤️ for educational accessibility.
+
+# Aouthor 
+
+G Chamod Madushanka 
+Mohamed Aniq Zulfikar 
