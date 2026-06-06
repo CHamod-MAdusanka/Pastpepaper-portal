@@ -16,16 +16,16 @@ A simple, fast, and user-friendly web portal to browse, search, and download edu
 
 ## 📂 Folder Structure
 \`\`\`text
-├── css/
-│   └── style.css          # Custom styling
-├── static/                # Directory containing all the PDF files
-│   ├── 2014-dancing.pdf
-│   ├── 2017-art.pdf
-│   ├── 2017-mathematics.pdf
-│   └── 2019-sinhala.pdf
-├── index.html             # Main HTML layout
-├── app.js                 # Core JavaScript logic
-└── README.md              # Project documentation
+#  ── css/
+# │   └── style.css          # Custom styling
+# ├── static/                # Directory containing all the PDF files
+# │   ├── 2014-dancing.pdf
+# │   ├── 2017-art.pdf
+# │   ├── 2017-mathematics.pdf
+# │   └── 2019-sinhala.pdf
+# ├── index.html             # Main HTML layout
+# ├── app.js                 # Core JavaScript logic
+# └── README.md              # Project documentation
 \`\`\`
 
 ## 🚀 How to Run Locally
