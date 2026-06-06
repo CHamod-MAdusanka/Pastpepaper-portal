@@ -1,45 +1,60 @@
-
-
+/* General body styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    background-color: #f4f7f6;
 }
 
+/* Navbar gradient styling */
+.navbar {
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+}
 
+/* Search bar styling */
+#searchBar {
+    border-radius: 50px;
+    padding: 15px 25px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+#searchBar:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+    outline: none;
+}
+
+/* Category buttons styling */
+.btn-outline-primary {
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-outline-primary:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Card hover animation */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 15px;
 }
 
 .card:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-8px); /* Lift effect on hover */
     box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
 }
 
-
-.navbar {
-    background: linear-gradient(90deg, #0d6efd, #0a58ca);
-}
-
-#searchBar {
-    border-radius: 50px;
-    padding: 15px 25px;
-    border: 2px solid #ddd;
-}
-
-#searchBar:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
-}
-
-.btn-outline-primary {
-    border-radius: 20px;
-    padding: 8px 20px;
-    font-weight: 500;
-}
-
-
+/* Card title styling */
 .card-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #222;
+}
+
+/* Download button */
+.btn-success {
+    border-radius: 10px;
+    font-weight: bold;
 }
