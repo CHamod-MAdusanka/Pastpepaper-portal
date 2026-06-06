@@ -1,8 +1,8 @@
 const allPapers = [
-    { title: "2014 Dancing Paper", subject: "Dancing", url: "2014-dancing.pdf" },
-    { title: "2017 Art Paper", subject: "Art", url: "2017-art.pdf" },
-    { title: "2017 Mathematics Paper", subject: "Mathematics", url: "2017-mathematics.pdf" },
-    { title: "2019 Sinhala Paper", subject: "Sinhala", url: "2019-sinhala.pdf" }
+    { title: "2014 Dancing Paper", subject: "Dancing", url: "static/2014-dancing.pdf" },
+    { title: "2017 Art Paper", subject: "Art", url: "static/2017-art.pdf" },
+    { title: "2017 Mathematics Paper", subject: "Mathematics", url: "static/2017-mathematics.pdf" },
+    { title: "2019 Sinhala Paper", subject: "Sinhala", url: "static/2019-sinhala.pdf" }
 ];
 
 function filterPapers(subject) {
@@ -11,6 +11,7 @@ function filterPapers(subject) {
     const filtered = (subject === 'All') 
         ? allPapers 
         : allPapers.filter(p => p.subject === subject);
+    
     filtered.forEach(paper => {
         container.innerHTML += `
             <div class="col-md-4 mb-3">
